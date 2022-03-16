@@ -1,11 +1,17 @@
-#!/bin/bash
-deploy=false
-uglify=false
-while (( $# > 1 )); do case $1 in
- --deploy) deploy="$2";;
- --uglify) uglify="$2";;
- *) break;
-esac; shift 2
-done
-$deploy && echo "will deploy... deploy = $deploy"
-$uglify && echo "will uglify... uglify = $uglify"
+#! /bin/bash
+
+echo $1
+echo $2
+
+
+# Arguments as a array
+args=("$@")
+
+echo ${args[1]}
+
+#or
+echo $@
+
+#number of arguments
+
+echo $#
